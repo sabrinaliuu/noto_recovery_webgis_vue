@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/noto_recovery_webgis_vue/',
   plugins: [
     vue(),
     vueDevTools(),
