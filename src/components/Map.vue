@@ -285,7 +285,7 @@ onMounted(async () => {
 
     // fetch geojson data for polygons
     try {
-        const response = await fetch('/noto_poly.geojson'); 
+        const response = await fetch(import.meta.env.BASE_URL + '/noto_poly.geojson');
         if (!response.ok) throw new Error('error fetching GeoJSON');
         const data = await response.json();
         geojson.value = data;
@@ -295,7 +295,7 @@ onMounted(async () => {
     }
 
     // fetch geojson data for regions
-    const res = await fetch("./noto.geojson");
+    const res = await fetch(import.meta.env.BASE_URL + "/noto.geojson");
     geoData.value = await res.json();
 
     // init comparison bar chart
