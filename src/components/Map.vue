@@ -289,7 +289,6 @@ onMounted(async () => {
         if (!response.ok) throw new Error('error fetching GeoJSON');
         const data = await response.json();
         geojson.value = data;
-        console.log("GeoJSON loaded successfully:", data);
     } catch (error) {
         console.error("Error fetching GeoJSON:", error);
     }
