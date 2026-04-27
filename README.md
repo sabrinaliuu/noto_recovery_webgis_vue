@@ -51,6 +51,31 @@ The <b>Life Recovery Elements, Cities in Noto Peninsula, and Sentiment </b> will
 ### Skills
 Use `JS/CSS/Vue/Leaflet (frontend) + Flask (backend)`
 
+### For using Vue
+Please install
+```
+npm install tailwindcss @tailwindcss/vite
+npm install tailwindcss @tailwindcss/vite
+npm install chart.js
+```
+And import
+```
+// leaflet // import to *.vue 
+<script setup>
+import 'leaflet/dist/leaflet.css';
+import { LMap, LTileLayer, LMarker, LTooltip, LGeoJson, LControlZoom, LControl } from "@vue-leaflet/vue-leaflet";
+import L from 'leaflet';
+</script>
+
+// tailwindcss // import to main.css
+@import "tailwindcss";
+
+// chart.js // import to *.vue 
+<script setup>
+import Chart from "chart.js/auto";
+</script>
+```
+
 ## About the study
 In this study, NLP methods were applied to recognize the <b>recovery elements (keyword-based approach), sentiments (GPT-based approach), and locations (keyword-based approach)</b> in each paragraph. In other words, the textual data was converted into numerical data for further quantitative analysis.
 
