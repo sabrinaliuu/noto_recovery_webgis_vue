@@ -48,6 +48,19 @@ The <b>Life Recovery Elements, Cities in Noto Peninsula, and Sentiment </b> will
 
 `Note`: If you want to know more about the Recognition model and the backend by applying Flask, please visit <a href="https://github.com/sabrinaliuu/noto_recovery_webgis/tree/master/backend">this link</a>.
 
+### Web API
+If you want to use the NLP model, you can retrieve it by
+```
+## Python
+# - Example -
+import requests
+r = requests.post("https://noto-recovery-webgis.onrender.com/analyze", json={"text":"能登半島地震で被災した輪島塗の工房を支援しようと東日本大震災の被災地で仮設商店として使われていたトレーラーハウス2台が、9日、輪島市の団体「輪島塗若手ネットワーク」に寄贈されました"})
+print(r.json())
+
+# Return json
+{"elements":["relation to government","economic and financial situation"],"places":["輪島市"],"sentiment":"Neutral"}
+```
+
 ### Skills
 Use `JS/CSS/Vue/Leaflet (frontend) + Flask (backend)`
 
